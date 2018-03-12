@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "SelectableObjectBaseWidget.h"
+#include "Runtime/UMG/Public/Components/Button.h"
 #include "Runtime/UMG/Public/Components/PanelWidget.h"
 #include "Runtime/UMG/Public/Blueprint/WidgetTree.h"
 #include "ObjectSelectorBaseWidget.h"
@@ -16,6 +17,11 @@
 //	}
 //	return Super::RebuildWidget();
 //}
+
+void USelectableObjectBaseWidget::NativeConstruct()
+{
+	WidgetButton->OnReleased.AddDynamic(this, &USelectableObjectBaseWidget::OnSelectThisObject);
+}
 
 void USelectableObjectBaseWidget::OnSelectThisObject()
 {

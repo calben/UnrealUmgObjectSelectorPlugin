@@ -33,11 +33,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UObjectSelectorBaseWidget* ObjectSelectorWidget;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
-		class UPanelWidget* WidgetPanel;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		class UButton* WidgetButton;
 
 	UFUNCTION(BlueprintCallable)
 		void OnSelectThisObject();
+
+	void NativeConstruct() override;
 
 	//virtual TSharedRef<SWidget> RebuildWidget() override;
 };

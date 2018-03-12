@@ -1,25 +1,24 @@
 {
-	"FileVersion": 3,
-	"Version": 1,
-	"VersionName": "1.0",
-	"EngineVersion": "4.17.0",
-	"FriendlyName": "Umg Object Selector Plugin",
-	"Description": "",
-	"Category": "UI",
-	"CreatedBy": "Calem Bendell",
-	"CreatedByURL": "github.com/calben",
-	"DocsURL": "",
-	"MarketplaceURL": "",
-	"SupportURL": "",
-	"EnabledByDefault": true,
-	"CanContainContent": true,
-	"IsBetaVersion": false,
-	"Installed": false,
-	"Modules": [
-		{
-			"Name": "UmgObjectSelector",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	]
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Umg Object Selector Plugin",
+  "Description": "",
+  "Category": "UI",
+  "CreatedBy": "Calem Bendell",
+  "CreatedByURL": "github.com/calben",
+  "DocsURL": "",
+  "MarketplaceURL": "",
+  "SupportURL": "",
+  "EnabledByDefault": true,
+  "CanContainContent": true,
+  "IsBetaVersion": false,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "UmgObjectSelector",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
 }
