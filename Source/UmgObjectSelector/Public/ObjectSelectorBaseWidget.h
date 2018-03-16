@@ -26,7 +26,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (BindWidget))
 		class UPanelWidget* BasePanel;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TSubclassOf<USelectableObjectBaseWidget> SelectableObjectBaseWidgetClass;
 
 	UPROPERTY(BlueprintAssignable, Category = "Widget Event")

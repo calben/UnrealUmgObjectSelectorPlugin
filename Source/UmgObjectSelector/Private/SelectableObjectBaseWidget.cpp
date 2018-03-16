@@ -20,7 +20,7 @@
 
 void USelectableObjectBaseWidget::NativeConstruct()
 {
-	WidgetButton->OnReleased.AddDynamic(this, &USelectableObjectBaseWidget::OnSelectThisObject);
+	SelectableObjectButton->OnReleased.AddDynamic(this, &USelectableObjectBaseWidget::OnSelectThisObject);
 }
 
 void USelectableObjectBaseWidget::OnSelectThisObject()
