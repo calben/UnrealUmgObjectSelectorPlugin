@@ -5,6 +5,6 @@
 
 void USelectableObjectTextWidget::SetupSelectableObjectData(FSelectableObjectTextData SelectableObjectData)
 {
-	IconTextBlock->SetText(SelectableObjectData.IconText);
+	IconTextBlock->SetText(SelectableObjectData.ItemText);
 	ContainedObject = SelectableObjectData.ContainedObject;
 }

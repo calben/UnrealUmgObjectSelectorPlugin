@@ -15,7 +15,7 @@ struct FSelectableObjectTextData : public FSelectableObjectData
 public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		FText IconText;
+		FText ItemText;
 };
 
 /**
