@@ -20,10 +20,10 @@ class UMGOBJECTSELECTOR_API UObjectSelectorBaseWidget : public UUserWidget
 
 public:
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UObject* CurrentSelectedObject;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UPanelWidget* BasePanel;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
