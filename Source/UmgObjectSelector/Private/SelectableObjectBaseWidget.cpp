@@ -20,17 +20,38 @@
 
 void USelectableObjectBaseWidget::NativeConstruct()
 {
-	SelectableObjectButton->OnReleased.AddDynamic(this, &USelectableObjectBaseWidget::OnSelectThisObject);
+	Super::Construct();
+	SelectableObjectButton->OnReleased.AddDynamic(this, &USelectableObjectBaseWidget::TrySelect);
 }
 
-void USelectableObjectBaseWidget::OnSelectThisObject()
+void USelectableObjectBaseWidget::TrySelect()
 {
-	if (ObjectSelectorWidget != nullptr)
+	if (bAllowSelect)
 	{
-		ObjectSelectorWidget->CurrentSelectedObject = ContainedObject;
-		if (ObjectSelectorWidget->OnObjectSelectionChanged.IsBound())
+		if (!bIsSelected || bAllowReselect)
 		{
-			ObjectSelectorWidget->OnObjectSelectionChanged.Broadcast(ContainedObject);
+			bIsSelected = true;
+			if (ObjectSelectorWidget != nullptr)
+			{
+				ObjectSelectorWidget->OnSelectableObjectBaseWidgetSelected(this);
+			}
+			if (OnSelected.IsBound())
+			{
+				OnSelected.Broadcast();
+			}
 		}
 	}
 }
+
+void USelectableObjectBaseWidget::TryDeselect()
+{
+	if (bAllowDeselect)
+	{
+		bIsSelected = false;
+		if (OnDeselected.IsBound())
+		{
+			OnDeselected.Broadcast();
+		}
+	}
+}
+
