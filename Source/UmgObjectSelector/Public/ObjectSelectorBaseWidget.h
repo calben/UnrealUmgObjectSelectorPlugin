@@ -20,17 +20,26 @@ class UMGOBJECTSELECTOR_API UObjectSelectorBaseWidget : public UUserWidget
 
 public:
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		bool bAllowMultiselect = false;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+
 		UObject* CurrentSelectedObject;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UPanelWidget* BasePanel;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		TArray<USelectableObjectBaseWidget*> SelectableChildWidgets;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		TSubclassOf<USelectableObjectBaseWidget> SelectableObjectBaseWidgetClass;
 
 	UPROPERTY(BlueprintAssignable, Category = "Widget Event")
 		FOnObjectSelectionChangedEvent OnObjectSelectionChanged;
+
+	UFUNCTION()
+		void OnSelectableObjectBaseWidgetSelected(USelectableObjectBaseWidget* SelectedWidget);
 
 	UFUNCTION(BlueprintCallable)
 		void AddSelectableObjectToWidget(class USelectableObjectBaseWidget* Widget);
