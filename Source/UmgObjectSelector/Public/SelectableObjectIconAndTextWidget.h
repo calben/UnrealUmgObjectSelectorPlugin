@@ -31,10 +31,10 @@ class UMGOBJECTSELECTOR_API USelectableObjectIconAndTextWidget : public USelecta
 
 public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UImage* IconImage;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* IconTextBlock;
 
 	UFUNCTION(BlueprintCallable)

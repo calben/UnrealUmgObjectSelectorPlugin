@@ -46,7 +46,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		class UObjectSelectorBaseWidget* ObjectSelectorWidget;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UButton* SelectableObjectButton;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

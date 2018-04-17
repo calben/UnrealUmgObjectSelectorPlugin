@@ -26,7 +26,7 @@ public:
 
 		UObject* CurrentSelectedObject;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UPanelWidget* BasePanel;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)

@@ -28,7 +28,7 @@ class UMGOBJECTSELECTOR_API USelectableObjectTextWidget : public USelectableObje
 
 public:
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* IconTextBlock;
 
 	UFUNCTION(BlueprintCallable)
