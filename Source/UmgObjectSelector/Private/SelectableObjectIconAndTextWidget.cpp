@@ -16,7 +16,14 @@
 
 void USelectableObjectIconAndTextWidget::SetupSelectableObjectData(FSelectableObjectIconAndTextData SelectableObjectData)
 {
-	IconImage->SetBrushFromTexture(SelectableObjectData.IconTexture);
+	if (IconImage != nullptr)
+	{
+		IconImage->SetBrushFromTexture(SelectableObjectData.IconTexture);
+	}
+	else if (DefaultIconImage != nullptr)
+	{
+		IconImage->SetBrushFromTexture(DefaultIconImage);
+	}
 	IconTextBlock->SetText(SelectableObjectData.IconText);
 	ContainedObject = SelectableObjectData.ContainedObject;
 }

@@ -37,6 +37,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 		class UTextBlock* IconTextBlock;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		class UTexture2D* DefaultIconImage;
+
 	UFUNCTION(BlueprintCallable)
 		void SetupSelectableObjectData(FSelectableObjectIconAndTextData SelectableObjectData);
 
